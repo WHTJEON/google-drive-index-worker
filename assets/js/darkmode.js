@@ -2,7 +2,7 @@ function toggleDarkmode() {
     if (getCookie('darkmode') == 'false') {
         darkmodeStylesheet = document.createElement('link');
         darkmodeStylesheet['rel'] = 'stylesheet';
-        darkmodeStylesheet['href'] = 'https://www.luzea.ovh/testassets/css/darkmode.css';
+        darkmodeStylesheet['href'] = 'https://cdn.luzea.ovh/google-drive-index-worker/assets/css/darkmode.css';
         document.head.appendChild(darkmodeStylesheet);
         setCookie('darkmode', 'true');
     } else if (getCookie('darkmode') == "true") {
@@ -33,6 +33,6 @@ if (getCookie('darkmode') == '') {
 } else if (getCookie('darkmode') == 'true') {
     var darkmodeStylesheet = document.createElement('link');
     darkmodeStylesheet['rel'] = 'stylesheet';
-    darkmodeStylesheet['href'] = 'https://www.luzea.ovh/testassets/css/darkmode.css';
+    darkmodeStylesheet['href'] = 'https://cdn.luzea.ovh/google-drive-index-worker/assets/css/darkmode.css';
     document.head.appendChild(darkmodeStylesheet);
 }
