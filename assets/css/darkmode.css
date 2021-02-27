@@ -1,0 +1,57 @@
+body, .ui.segment, .ui.table, .pusher {
+    background-color: #111 !important;
+}
+
+body, .ui.section, .ui.divider, .ui.table, .ui.table.celled td {
+    color: #fff;
+}
+
+.ui.segment, .ui.normal.modal .header {
+    border-color: #2a2a2a !important;
+}
+
+.ui.table th, .ui.table thead, .ui.message, .ui.message .header, .ui.steps .active.step, .ui.steps .active.step::after, .ui.dropdown .menu .item:hover, .ui.dropdown .menu .selected.item {
+    background-color: #222 !important;
+}
+
+.ui.table, .ui.table.celled td, .ui.table.celled th {
+    border-color: #2e2e2e !important;
+}
+
+label, .ui.table th, .ui.table thead, .ui.header, .ui.message, .ui.message .header, .ui.accordion .title {
+    color: #fff !important;
+}
+
+.ui.dropdown, .ui.dropdown .menu, .ui.dropdown .menu .item, .ui.dropdown .text, .ui.dropdown input, .ui.dropdown .message, .ui input, .ui textarea {
+    background-color: #1a1a1a !important;
+    border-color: #2a2a2a !important;
+    color: #fff !important;
+}
+
+.ui.table.striped tr:nth-child(2n), .ui.styled.accordion {
+    background-color: #1a1a1a !important;
+}
+
+.ui.button {
+    background-color: #303030;
+    color: #fff;
+}
+
+.ui.button:hover, .ui.button:focus {
+    background-color: #383838;
+    color: #fff;
+}
+
+.ui.button:active {
+    background-color: #444;
+    color: #fff;
+}
+
+input::selection, textarea::selection {
+    background-color: #359;
+    color: #fff;
+}
+
+.ui.message, .ui.message .header, .ui.styled.accordion {
+    box-shadow: none !important;
+}

@@ -1,0 +1,45 @@
+.background.container {
+    background-image: url(https://www.luzea.ovh/testassets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1em;
+}
+
+.ui.inverted.center.aligned.header {
+    user-select: none;
+}
+
+.ui.inverted.attached.secondary.menu a {
+    display: block;
+}
+
+.content.container {
+    padding: 1em 0;
+}
+
+.stretched.container {
+    position: relative;
+}
+
+.stretched.link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+
+@media only screen and (min-width: 1392px) {
+    .ui.container {
+        width: 1308px !important;
+    }
+}
+
+@media only screen and (min-width: 1568px) {
+    .ui.container {
+        width: 1474px !important;
+    }
+}
