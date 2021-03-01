@@ -2957,6 +2957,8 @@ self.props = {
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.min.js"></script>
     </head>
     <body>
         <div id="sidebar" class="ui inverted left vertical menu sidebar"></div>
@@ -2972,7 +2974,7 @@ self.props = {
                 <h2 class="ui center aligned header">
                     <div><i class="fitted folder icon"></i> ${path}</div>
                 </h2>
-                <table class="ui hidden striped table">
+                <table class="ui striped table">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -2984,6 +2986,8 @@ self.props = {
                         ${(path != '/' ? '<tr><td><i class="folder minus icon"></i> <a href="' + parent + '">..</a></td><td></td><td></td></tr>' : '')}${content}
                     </tbody>
                 </table>
+                <div id="loader" class="ui active centered inline loader"></div>
+                <div id="readme-content" class="hidden"></div>
                 <div class="ui divider"></div>
                 <div id="footer"></div>
             </div>

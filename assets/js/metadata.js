@@ -47,4 +47,17 @@ function updateMetadata() {
             element.innerHTML = getHumanReadableSize(element.innerHTML);
         }
     }
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var markdown = window.markdownit();
+            document.getElementById('readme-content').innerHTML = '<div class="ui segment">' + markdown.render(this.responseText) + '</div>';
+            document.getElementById('readme-content').classList.remove('hidden');
+        }
+        if (this.readyState == 4) {
+            document.getElementById('loader').classList.remove('active');
+        }
+    }
+    xhr.open('GET', 'README.md');
+    xhr.send();
 }
