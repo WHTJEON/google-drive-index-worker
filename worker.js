@@ -2925,7 +2925,7 @@ self.props = {
             for (const f of files) {
                 const isf = f.mimeType === 'application/vnd.google-apps.folder';
                 const p = encodePathComponent(path + f.name);
-                content += `<tr class="stretched container"><td><i class="${(isf ? 'folder' : 'file')} icon"></i> <a href="${p + (isf ? '/' : '')}" class="stretched link">${f.name}</a></td><td>${f.modifiedTime}</td><td>${(isf ? '' : f.size)}</td></tr>`;
+                content += `<tr><td><i class="${(isf ? 'folder' : 'file')} icon"></i> <a href="${p + (isf ? '/' : '')}">${f.name}</a></td><td>${f.modifiedTime}</td><td>${(isf ? '' : f.size)}</td></tr>`;
             }
 
             const html = `<!DOCTYPE html>
@@ -2981,7 +2981,7 @@ self.props = {
                         </tr>
                     </thead>
                     <tbody>
-                        ${(path != '/' ? '<tr class="stretched container"><td><i class="folder minus icon"></i> <a href="' + parent + '" class="stretched link">..</a></td><td></td><td></td></tr>' : '')}${content}
+                        ${(path != '/' ? '<tr><td><i class="folder minus icon"></i> <a href="' + parent + '">..</a></td><td></td><td></td></tr>' : '')}${content}
                     </tbody>
                 </table>
                 <div class="ui divider"></div>
