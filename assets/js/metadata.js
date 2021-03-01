@@ -1,8 +1,8 @@
 function getHumanReadableDateTime(string) {
     var date = new Date(string);
     var year = date.getUTCFullYear();
-    var month = date.getUTCMonth();
-    var day = date.getUTCDay();
+    var month = date.getUTCMonth() + 1;
+    var day = date.getUTCDate();
     var hours = date.getUTCHours();
     var minutes = date.getUTCMinutes();
     var seconds = date.getUTCSeconds();
