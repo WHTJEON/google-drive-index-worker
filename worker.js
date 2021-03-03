@@ -2909,6 +2909,15 @@ self.props = {
             return unauthorized();
         }
 
+        if (request.pathname.includes('0:/')) {
+            return new Response(null, {
+                status: 301,
+                headers: {
+                    'Location': request.pathname.replace('0:/', '')
+                }
+            });
+        }
+
         request = Object.assign({}, request, new URL(request.url));
         request.pathname = request.pathname.split('/').map(decodeURIComponent).map(decodeURIComponent) // for some super special cases, browser will force encode it...   eg: +αあるふぁきゅん。 - +♂.mp3
             .join('/');
