@@ -2909,6 +2909,10 @@ self.props = {
             return unauthorized();
         }
 
+        request = Object.assign({}, request, new URL(request.url));
+        request.pathname = request.pathname.split('/').map(decodeURIComponent).map(decodeURIComponent) // for some super special cases, browser will force encode it...   eg: +αあるふぁきゅん。 - +♂.mp3
+            .join('/');
+
         if (request.pathname.includes('0:/')) {
             return new Response(null, {
                 status: 301,
@@ -2917,10 +2921,6 @@ self.props = {
                 }
             });
         }
-
-        request = Object.assign({}, request, new URL(request.url));
-        request.pathname = request.pathname.split('/').map(decodeURIComponent).map(decodeURIComponent) // for some super special cases, browser will force encode it...   eg: +αあるふぁきゅん。 - +♂.mp3
-            .join('/');
 
         if ((self.props.lite || request.headers.get('x-lite') == 'true') && request.pathname.endsWith('/')) {
             // lite mode
