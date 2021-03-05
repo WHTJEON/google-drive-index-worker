@@ -1,1 +1,1 @@
-document.getElementById('footer').innerHTML = 'Copyright &copy; 2021 luzea. <a href="https://choosealicense.com/licenses/mit/">MIT License</a>.';
+document.getElementById('footer').innerHTML = 'The script used by this site is licensed under the <a href="https://choosealicense.com/licenses/mit/">MIT License</a>.';
